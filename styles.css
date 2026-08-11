@@ -1883,8 +1883,8 @@ p {
 
 .hero-media img {
   position: absolute;
-  inset: 0 0 0 auto;
-  width: 78%;
+  inset: 0 -6% 0 auto;
+  width: 70%;
   height: 100%;
   object-fit: cover;
   object-position: 52% 38%;
@@ -1893,12 +1893,13 @@ p {
 .hero-panel {
   position: absolute;
   z-index: 2;
-  inset: 28px auto 28px 28px;
+  inset: 28px auto auto 28px;
   display: flex;
   width: min(55%, 700px);
   min-height: 0;
   margin: 0;
   padding: clamp(24px, 2.4vw, 34px);
+  padding-bottom: 32px;
   justify-content: center;
   border-radius: var(--radius-large);
   background: rgba(248, 247, 244, 0.9);
@@ -1989,7 +1990,61 @@ p {
 }
 
 .method-card {
+  display: flex;
   min-height: 0;
+  flex-direction: column;
+}
+
+.method-card__visual {
+  flex: 0 0 auto;
+}
+
+.method-card__media {
+  height: 280px;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+}
+
+.method-card__media img {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 240px);
+  max-height: 270px;
+  padding: 0;
+}
+
+.method-card__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.method-card__meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#methods .medical-note {
+  width: 100%;
+  max-width: none;
+}
+
+#selection .section-heading,
+#results .section-heading,
+#reviews .section-heading {
+  display: block;
+}
+
+#selection .section-heading h2,
+#results .section-heading h2,
+#reviews .section-heading h2 {
+  max-width: none;
+}
+
+.footer-consultation {
+  align-self: start;
 }
 
 .price-note {
@@ -2330,6 +2385,10 @@ p {
     height: 240px;
   }
 
+  .method-card__media img {
+    max-height: 230px;
+  }
+
   .clinic-grid {
     grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
   }
@@ -2529,6 +2588,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .method-card__meta {
+    grid-template-columns: 1fr;
+  }
+
   .result-card:first-child {
     grid-column: auto;
   }
@@ -2694,10 +2757,10 @@ p {
   .hero-proof {
     display: grid;
     order: -1;
-    margin: 0 0 12px;
+    margin: 0 0 18px;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 8px 18px;
+    gap: 18px;
     text-align: left;
   }
 
@@ -2752,6 +2815,20 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  #selection .section-heading h2,
+  #results .section-heading h2,
+  #reviews .section-heading h2 {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1279px) {
+  .method-card__meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
