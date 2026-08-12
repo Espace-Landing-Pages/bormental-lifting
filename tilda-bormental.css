@@ -2838,3 +2838,8 @@
     display: none;
   }
 }
+
+/* BF502N adds a demo caption below the native popup form. */
+.t702__form-bottom-text {
+  display: none !important;
+}
