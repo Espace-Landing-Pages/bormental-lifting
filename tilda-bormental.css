@@ -2843,3 +2843,60 @@
 .t702__form-bottom-text {
   display: none !important;
 }
+
+/* Native Tilda inline form, styled to match the landing design system. */
+#rec2944250503 {
+  padding: 80px 20px !important;
+  background: #f1e9e1;
+}
+
+#rec2944250503 .t678 {
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 20px;
+  border: 1px solid #dad6d1;
+  border-radius: 28px;
+  background: #f8f7f4;
+}
+
+#rec2944250503 .t678::before {
+  content: "Подобрать процедуру на консультации";
+  display: block;
+  max-width: 840px;
+  margin: 0 auto 34px;
+  color: #272625;
+  font: 500 clamp(32px, 4vw, 52px) / 1.05 Onest, Arial, sans-serif;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+#rec2944250503 .t-container {
+  width: min(100%, 840px);
+}
+
+#rec2944250503 .t-input,
+#rec2944250503 .t-input-block textarea {
+  border: 1px solid #dad6d1 !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  color: #272625 !important;
+}
+
+#rec2944250503 .t-submit {
+  border-radius: 14px !important;
+  background: #c9937c !important;
+  color: #272625 !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 640px) {
+  #rec2944250503 {
+    padding: 48px 14px !important;
+  }
+
+  #rec2944250503 .t678 {
+    padding: 40px 14px;
+    border-radius: 20px;
+  }
+}
